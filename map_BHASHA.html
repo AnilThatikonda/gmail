@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9f52ce16d4975f4a4052ac007c42f00f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_9f52ce16d4975f4a4052ac007c42f00f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_9f52ce16d4975f4a4052ac007c42f00f = L.map(
+                "map_9f52ce16d4975f4a4052ac007c42f00f",
+                {
+                    center: [15.03669055551, 77.531374879181],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c9dc76bab8f2792e833f2fb5e3cd3783 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_c9dc76bab8f2792e833f2fb5e3cd3783.addTo(map_9f52ce16d4975f4a4052ac007c42f00f);
+        
+    
+            var locate_control_7f4a015508a2557cd010bc7c423109ad = L.control.locate(
+                {}
+            ).addTo(map_9f52ce16d4975f4a4052ac007c42f00f);
+            
+                locate_control_7f4a015508a2557cd010bc7c423109ad.start();
+            
+        
+    
+            var marker_b2aa7bbdf9e051f2f0f16526c1c63331 = L.marker(
+                [12.9716, 77.5946],
+                {}
+            ).addTo(map_9f52ce16d4975f4a4052ac007c42f00f);
+        
+    
+            var icon_9108d014649f8fd8178aac9c36d090f2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b2aa7bbdf9e051f2f0f16526c1c63331.setIcon(icon_9108d014649f8fd8178aac9c36d090f2);
+        
+    
+        var popup_cc8b3c92d2a1815dabe93fa90ebd2460 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4ebd7e19b8fcf087009e85f1dfd4bbb8 = $(`<div id="html_4ebd7e19b8fcf087009e85f1dfd4bbb8" style="width: 100.0%; height: 100.0%;">Current Location</div>`)[0];
+                popup_cc8b3c92d2a1815dabe93fa90ebd2460.setContent(html_4ebd7e19b8fcf087009e85f1dfd4bbb8);
+            
+        
+
+        marker_b2aa7bbdf9e051f2f0f16526c1c63331.bindPopup(popup_cc8b3c92d2a1815dabe93fa90ebd2460)
+        ;
+
+        
+    
+    
+            var feature_group_c1abfff4d7baf6140b93518e6c7a7f53 = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_cd6edd817565ddda870566684073f765 = L.marker(
+                [15.050364152516716, 77.51620053265394],
+                {}
+            ).addTo(feature_group_c1abfff4d7baf6140b93518e6c7a7f53);
+        
+    
+            var div_icon_e7bfa67cfeb0b3448d8630d114f71188 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"display: flex; flex-direction: column; align-items: center; text-align: center;\"\u003e\n                    \u003ci class=\"fa fa-bolt\" style=\"font-size: 36px; color: #c5d83a;\"\u003e\u003c/i\u003e\u003cbr\u003e\n                    \u003cdiv style=\"font-size: 10px; color: #c5d83a; font-weight: bold;\"\u003e\n                        11 KV Nagasamudram+24 Hrs\n                    \u003c/div\u003e\n                \u003c/div\u003e\n                ", "iconSize": [50, 50]});
+            marker_cd6edd817565ddda870566684073f765.setIcon(div_icon_e7bfa67cfeb0b3448d8630d114f71188);
+        
+    
+        var popup_1df890c6c9f4bd3a0c730c17e4770961 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_570fd9ef9758b82e39e12ee6b7ce2708 = $(`<div id="html_570fd9ef9758b82e39e12ee6b7ce2708" style="width: 100.0%; height: 100.0%;"><b>Device ID:</b> LNT22507356<br><a href='https://www.google.com/maps/dir/?api=1&destination=15.03669055551,77.531374879181&travelmode=driving&name=LNT22507356_avgkm_3.66' target='_blank'>Navigate</a><br>Distance to current location: 230 km<br><b>Device ID:</b> JPM22108141<br><a href='https://www.google.com/maps/dir/?api=1&destination=15.02408673858,77.553771995008&travelmode=driving&name=JPM22108141_avgkm_3.66' target='_blank'>Navigate</a><br>Distance to current location: 228 km<br><b>Device ID:</b> LNT22507492<br><a href='https://www.google.com/maps/dir/?api=1&destination=15.019218442933,77.51150675118&travelmode=driving&name=LNT22507492_avgkm_3.66' target='_blank'>Navigate</a><br>Distance to current location: 228 km<br><b>Device ID:</b> LNT22507089<br><a href='https://www.google.com/maps/dir/?api=1&destination=15.056960531303,77.472056485713&travelmode=driving&name=LNT22507089_avgkm_3.66' target='_blank'>Navigate</a><br>Distance to current location: 232 km<br><b>Device ID:</b> LNT22507770<br><a href='https://www.google.com/maps/dir/?api=1&destination=15.029911449822,77.537780664861&travelmode=driving&name=LNT22507770_avgkm_3.66' target='_blank'>Navigate</a><br>Distance to current location: 229 km<br><b>Device ID:</b> JPM22108565<br><a href='https://www.google.com/maps/dir/?api=1&destination=15.071473146375,77.522979900241&travelmode=driving&name=JPM22108565_avgkm_3.66' target='_blank'>Navigate</a><br>Distance to current location: 234 km<br><b>Device ID:</b> JPM22103650<br><a href='https://www.google.com/maps/dir/?api=1&destination=15.076196185975,77.514545693994&travelmode=driving&name=JPM22103650_avgkm_3.66' target='_blank'>Navigate</a><br>Distance to current location: 234 km<br><b>Device ID:</b> JPM22103733<br><a href='https://www.google.com/maps/dir/?api=1&destination=15.046622126129,77.518017143011&travelmode=driving&name=JPM22103733_avgkm_3.66' target='_blank'>Navigate</a><br>Distance to current location: 231 km<br><b>Device ID:</b> JPM22109498<br><a href='https://www.google.com/maps/dir/?api=1&destination=15.055792058619,77.509567514062&travelmode=driving&name=JPM22109498_avgkm_3.66' target='_blank'>Navigate</a><br>Distance to current location: 232 km<br><b>Device ID:</b> JPM22107379<br><a href='https://www.google.com/maps/dir/?api=1&destination=15.0739235,77.5128086&travelmode=driving&name=JPM22107379_avgkm_3.66' target='_blank'>Navigate</a><br>Distance to current location: 234 km<br><b>Device ID:</b> JPM22106575<br><a href='https://www.google.com/maps/dir/?api=1&destination=15.076026548147,77.51366391778&travelmode=driving&name=JPM22106575_avgkm_3.66' target='_blank'>Navigate</a><br>Distance to current location: 234 km<br><b>Device ID:</b> JPM22104425<br><a href='https://www.google.com/maps/dir/?api=1&destination=15.044181773614,77.520523667335&travelmode=driving&name=JPM22104425_avgkm_3.66' target='_blank'>Navigate</a><br>Distance to current location: 231 km<br><b>Device ID:</b> JPM22101563<br><a href='https://www.google.com/maps/dir/?api=1&destination=15.04851,77.5021752&travelmode=driving&name=JPM22101563_avgkm_3.66' target='_blank'>Navigate</a><br>Distance to current location: 231 km<br><b>Device ID:</b> JPM22101858<br><a href='https://www.google.com/maps/dir/?api=1&destination=15.045505078227,77.506035044789&travelmode=driving&name=JPM22101858_avgkm_3.66' target='_blank'>Navigate</a><br>Distance to current location: 231 km<br></div>`)[0];
+                popup_1df890c6c9f4bd3a0c730c17e4770961.setContent(html_570fd9ef9758b82e39e12ee6b7ce2708);
+            
+        
+
+        marker_cd6edd817565ddda870566684073f765.bindPopup(popup_1df890c6c9f4bd3a0c730c17e4770961)
+        ;
+
+        
+    
+    
+            marker_cd6edd817565ddda870566684073f765.bindTooltip(
+                `<div>
+                     NIDADAVOLE - 11 KV Nagasamudram+24 Hrs
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            feature_group_c1abfff4d7baf6140b93518e6c7a7f53.addTo(map_9f52ce16d4975f4a4052ac007c42f00f);
+        
+    
+            var feature_group_6b714c7010a881b551b76ea52decb5e9 = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_70b0d50c4e4d3be5608a4f27b6da8f36 = L.marker(
+                [15.03669055551, 77.531374879181],
+                {}
+            ).addTo(feature_group_6b714c7010a881b551b76ea52decb5e9);
+        
+    
+            var div_icon_2090cffa6710eeecab9f295a043f4233 = L.divIcon({"className": "empty", "html": "\n                        \u003cdiv style=\"display: flex; flex-direction: column; align-items: center; text-align: center;\"\u003e\n                            \u003ci class=\"fa fa-map-marker\" style=\"font-size: 24px; color: #c5d83a;\"\u003e\u003c/i\u003e\u003cbr\u003e\n                            \u003cdiv style=\"font-size: 10px; color: #c5d83a; font-weight: bold;\"\u003e\n                                LNT22507356\u003cbr\u003e\n                                230 km\n                            \u003c/div\u003e\n                        \u003c/div\u003e\n                        ", "iconSize": [50, 50]});
+            marker_70b0d50c4e4d3be5608a4f27b6da8f36.setIcon(div_icon_2090cffa6710eeecab9f295a043f4233);
+        
+    
+        var popup_5c723664da8e051aacfa04278449220d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_19468d1ad270e2aa5071dc9aa2cf1800 = $(`<div id="html_19468d1ad270e2aa5071dc9aa2cf1800" style="width: 100.0%; height: 100.0%;">                 <b>Device ID:</b> LNT22507356<br>                 <b>Serial No:</b> LNT22507356<br>                 <b>Manufacturer:</b> LNT<br>                 <b>Org Name:</b> EPDCL<br>                 <b>Circle Name:</b> ELURU<br>                 <b>Division Name:</b> NIDADAVOLE<br>                 <b>Sub Division Name:</b> NIDADAVOLE<br>                 <b>Section Name:</b> MORTHA<br>                 <b>Feeder Name:</b> 11 KV Nagasamudram+24 Hrs<br>                 <b>Operator:</b> nan<br>                 <b>GFM Remarks:</b> nan<br>                 <b>Current Dept:</b> nan<br>                 <b>Consumer Name:</b> venkata rao<br>                 <b>Distance to current location:</b> 230 km<br>                 <a href='https://www.google.com/maps/dir/?api=1&destination=15.03669055551,77.531374879181&travelmode=driving&name=LNT22507356_avgkm_3.66' target='_blank'>Navigate to this point</a>                 </div>`)[0];
+                popup_5c723664da8e051aacfa04278449220d.setContent(html_19468d1ad270e2aa5071dc9aa2cf1800);
+            
+        
+
+        marker_70b0d50c4e4d3be5608a4f27b6da8f36.bindPopup(popup_5c723664da8e051aacfa04278449220d)
+        ;
+
+        
+    
+    
+            marker_70b0d50c4e4d3be5608a4f27b6da8f36.bindTooltip(
+                `<div>
+                     Device ID: LNT22507356
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4991f4449a93a49f278002276c7da29f = L.marker(
+                [15.02408673858, 77.553771995008],
+                {}
+            ).addTo(feature_group_6b714c7010a881b551b76ea52decb5e9);
+        
+    
+            var div_icon_4bf8c6a76c3f6d8c094c7728b2d439f9 = L.divIcon({"className": "empty", "html": "\n                        \u003cdiv style=\"display: flex; flex-direction: column; align-items: center; text-align: center;\"\u003e\n                            \u003ci class=\"fa fa-map-marker\" style=\"font-size: 24px; color: #c5d83a;\"\u003e\u003c/i\u003e\u003cbr\u003e\n                            \u003cdiv style=\"font-size: 10px; color: #c5d83a; font-weight: bold;\"\u003e\n                                JPM22108141\u003cbr\u003e\n                                228 km\n                            \u003c/div\u003e\n                        \u003c/div\u003e\n                        ", "iconSize": [50, 50]});
+            marker_4991f4449a93a49f278002276c7da29f.setIcon(div_icon_4bf8c6a76c3f6d8c094c7728b2d439f9);
+        
+    
+        var popup_b7d9ab9008f5664eb260705f87389348 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_831135d589a5f10da176d1998c5e6955 = $(`<div id="html_831135d589a5f10da176d1998c5e6955" style="width: 100.0%; height: 100.0%;">                 <b>Device ID:</b> JPM22108141<br>                 <b>Serial No:</b> JPM22108141<br>                 <b>Manufacturer:</b> LNT<br>                 <b>Org Name:</b> EPDCL<br>                 <b>Circle Name:</b> ELURU<br>                 <b>Division Name:</b> NIDADAVOLE<br>                 <b>Sub Division Name:</b> NIDADAVOLE<br>                 <b>Section Name:</b> MORTHA<br>                 <b>Feeder Name:</b> 11 KV Nagasamudram+24 Hrs<br>                 <b>Operator:</b> nan<br>                 <b>GFM Remarks:</b> nan<br>                 <b>Current Dept:</b> nan<br>                 <b>Consumer Name:</b> venkata rao<br>                 <b>Distance to current location:</b> 228 km<br>                 <a href='https://www.google.com/maps/dir/?api=1&destination=15.02408673858,77.553771995008&travelmode=driving&name=JPM22108141_avgkm_3.66' target='_blank'>Navigate to this point</a>                 </div>`)[0];
+                popup_b7d9ab9008f5664eb260705f87389348.setContent(html_831135d589a5f10da176d1998c5e6955);
+            
+        
+
+        marker_4991f4449a93a49f278002276c7da29f.bindPopup(popup_b7d9ab9008f5664eb260705f87389348)
+        ;
+
+        
+    
+    
+            marker_4991f4449a93a49f278002276c7da29f.bindTooltip(
+                `<div>
+                     Device ID: JPM22108141
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7cb868a1d28d5d2a1441ac1e043c2683 = L.marker(
+                [15.019218442933, 77.51150675118],
+                {}
+            ).addTo(feature_group_6b714c7010a881b551b76ea52decb5e9);
+        
+    
+            var div_icon_0c31c491d35ca84a57827472d72b4779 = L.divIcon({"className": "empty", "html": "\n                        \u003cdiv style=\"display: flex; flex-direction: column; align-items: center; text-align: center;\"\u003e\n                            \u003ci class=\"fa fa-map-marker\" style=\"font-size: 24px; color: #c5d83a;\"\u003e\u003c/i\u003e\u003cbr\u003e\n                            \u003cdiv style=\"font-size: 10px; color: #c5d83a; font-weight: bold;\"\u003e\n                                LNT22507492\u003cbr\u003e\n                                228 km\n                            \u003c/div\u003e\n                        \u003c/div\u003e\n                        ", "iconSize": [50, 50]});
+            marker_7cb868a1d28d5d2a1441ac1e043c2683.setIcon(div_icon_0c31c491d35ca84a57827472d72b4779);
+        
+    
+        var popup_a8afe6a5d9c7c376a8a47c28483fd125 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ada075357db7498e3d9aea1e45e11292 = $(`<div id="html_ada075357db7498e3d9aea1e45e11292" style="width: 100.0%; height: 100.0%;">                 <b>Device ID:</b> LNT22507492<br>                 <b>Serial No:</b> LNT22507492<br>                 <b>Manufacturer:</b> LNT<br>                 <b>Org Name:</b> EPDCL<br>                 <b>Circle Name:</b> ELURU<br>                 <b>Division Name:</b> NIDADAVOLE<br>                 <b>Sub Division Name:</b> NIDADAVOLE<br>                 <b>Section Name:</b> MORTHA<br>                 <b>Feeder Name:</b> 11 KV Nagasamudram+24 Hrs<br>                 <b>Operator:</b> nan<br>                 <b>GFM Remarks:</b> nan<br>                 <b>Current Dept:</b> nan<br>                 <b>Consumer Name:</b> venkata rao<br>                 <b>Distance to current location:</b> 228 km<br>                 <a href='https://www.google.com/maps/dir/?api=1&destination=15.019218442933,77.51150675118&travelmode=driving&name=LNT22507492_avgkm_3.66' target='_blank'>Navigate to this point</a>                 </div>`)[0];
+                popup_a8afe6a5d9c7c376a8a47c28483fd125.setContent(html_ada075357db7498e3d9aea1e45e11292);
+            
+        
+
+        marker_7cb868a1d28d5d2a1441ac1e043c2683.bindPopup(popup_a8afe6a5d9c7c376a8a47c28483fd125)
+        ;
+
+        
+    
+    
+            marker_7cb868a1d28d5d2a1441ac1e043c2683.bindTooltip(
+                `<div>
+                     Device ID: LNT22507492
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ab35842c314a8b3d9b9024cabf410f05 = L.marker(
+                [15.056960531303, 77.472056485713],
+                {}
+            ).addTo(feature_group_6b714c7010a881b551b76ea52decb5e9);
+        
+    
+            var div_icon_bc69fbbe0516816ef5de4f304f26f3eb = L.divIcon({"className": "empty", "html": "\n                        \u003cdiv style=\"display: flex; flex-direction: column; align-items: center; text-align: center;\"\u003e\n                            \u003ci class=\"fa fa-map-marker\" style=\"font-size: 24px; color: #c5d83a;\"\u003e\u003c/i\u003e\u003cbr\u003e\n                            \u003cdiv style=\"font-size: 10px; color: #c5d83a; font-weight: bold;\"\u003e\n                                LNT22507089\u003cbr\u003e\n                                232 km\n                            \u003c/div\u003e\n                        \u003c/div\u003e\n                        ", "iconSize": [50, 50]});
+            marker_ab35842c314a8b3d9b9024cabf410f05.setIcon(div_icon_bc69fbbe0516816ef5de4f304f26f3eb);
+        
+    
+        var popup_5ac50bece27cb9362dad6414cf5164ef = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f7c39a117d740efa83685034a9c1f83e = $(`<div id="html_f7c39a117d740efa83685034a9c1f83e" style="width: 100.0%; height: 100.0%;">                 <b>Device ID:</b> LNT22507089<br>                 <b>Serial No:</b> LNT22507089<br>                 <b>Manufacturer:</b> LNT<br>                 <b>Org Name:</b> EPDCL<br>                 <b>Circle Name:</b> ELURU<br>                 <b>Division Name:</b> NIDADAVOLE<br>                 <b>Sub Division Name:</b> NIDADAVOLE<br>                 <b>Section Name:</b> MORTHA<br>                 <b>Feeder Name:</b> 11 KV Nagasamudram+24 Hrs<br>                 <b>Operator:</b> nan<br>                 <b>GFM Remarks:</b> nan<br>                 <b>Current Dept:</b> nan<br>                 <b>Consumer Name:</b> venkata rao<br>                 <b>Distance to current location:</b> 232 km<br>                 <a href='https://www.google.com/maps/dir/?api=1&destination=15.056960531303,77.472056485713&travelmode=driving&name=LNT22507089_avgkm_3.66' target='_blank'>Navigate to this point</a>                 </div>`)[0];
+                popup_5ac50bece27cb9362dad6414cf5164ef.setContent(html_f7c39a117d740efa83685034a9c1f83e);
+            
+        
+
+        marker_ab35842c314a8b3d9b9024cabf410f05.bindPopup(popup_5ac50bece27cb9362dad6414cf5164ef)
+        ;
+
+        
+    
+    
+            marker_ab35842c314a8b3d9b9024cabf410f05.bindTooltip(
+                `<div>
+                     Device ID: LNT22507089
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2f7ba1336d17570e13844793f7f46d42 = L.marker(
+                [15.029911449822, 77.537780664861],
+                {}
+            ).addTo(feature_group_6b714c7010a881b551b76ea52decb5e9);
+        
+    
+            var div_icon_e49fc7d362fd6e96cf7f7ea507a20ed4 = L.divIcon({"className": "empty", "html": "\n                        \u003cdiv style=\"display: flex; flex-direction: column; align-items: center; text-align: center;\"\u003e\n                            \u003ci class=\"fa fa-map-marker\" style=\"font-size: 24px; color: #c5d83a;\"\u003e\u003c/i\u003e\u003cbr\u003e\n                            \u003cdiv style=\"font-size: 10px; color: #c5d83a; font-weight: bold;\"\u003e\n                                LNT22507770\u003cbr\u003e\n                                229 km\n                            \u003c/div\u003e\n                        \u003c/div\u003e\n                        ", "iconSize": [50, 50]});
+            marker_2f7ba1336d17570e13844793f7f46d42.setIcon(div_icon_e49fc7d362fd6e96cf7f7ea507a20ed4);
+        
+    
+        var popup_ff7437cdca2ce5712f53571155aaf539 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2bef7a0ce229e701e547a4b9a945416c = $(`<div id="html_2bef7a0ce229e701e547a4b9a945416c" style="width: 100.0%; height: 100.0%;">                 <b>Device ID:</b> LNT22507770<br>                 <b>Serial No:</b> LNT22507770<br>                 <b>Manufacturer:</b> LNT<br>                 <b>Org Name:</b> EPDCL<br>                 <b>Circle Name:</b> ELURU<br>                 <b>Division Name:</b> NIDADAVOLE<br>                 <b>Sub Division Name:</b> NIDADAVOLE<br>                 <b>Section Name:</b> MORTHA<br>                 <b>Feeder Name:</b> 11 KV Nagasamudram+24 Hrs<br>                 <b>Operator:</b> nan<br>                 <b>GFM Remarks:</b> nan<br>                 <b>Current Dept:</b> nan<br>                 <b>Consumer Name:</b> venkata rao<br>                 <b>Distance to current location:</b> 229 km<br>                 <a href='https://www.google.com/maps/dir/?api=1&destination=15.029911449822,77.537780664861&travelmode=driving&name=LNT22507770_avgkm_3.66' target='_blank'>Navigate to this point</a>                 </div>`)[0];
+                popup_ff7437cdca2ce5712f53571155aaf539.setContent(html_2bef7a0ce229e701e547a4b9a945416c);
+            
+        
+
+        marker_2f7ba1336d17570e13844793f7f46d42.bindPopup(popup_ff7437cdca2ce5712f53571155aaf539)
+        ;
+
+        
+    
+    
+            marker_2f7ba1336d17570e13844793f7f46d42.bindTooltip(
+                `<div>
+                     Device ID: LNT22507770
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e9e9e10a078c8c60b47a9209e797d305 = L.marker(
+                [15.071473146375, 77.522979900241],
+                {}
+            ).addTo(feature_group_6b714c7010a881b551b76ea52decb5e9);
+        
+    
+            var div_icon_6d08ed8c065cf48a1025599954cae0ab = L.divIcon({"className": "empty", "html": "\n                        \u003cdiv style=\"display: flex; flex-direction: column; align-items: center; text-align: center;\"\u003e\n                            \u003ci class=\"fa fa-map-marker\" style=\"font-size: 24px; color: #c5d83a;\"\u003e\u003c/i\u003e\u003cbr\u003e\n                            \u003cdiv style=\"font-size: 10px; color: #c5d83a; font-weight: bold;\"\u003e\n                                JPM22108565\u003cbr\u003e\n                                234 km\n                            \u003c/div\u003e\n                        \u003c/div\u003e\n                        ", "iconSize": [50, 50]});
+            marker_e9e9e10a078c8c60b47a9209e797d305.setIcon(div_icon_6d08ed8c065cf48a1025599954cae0ab);
+        
+    
+        var popup_5ea3a1bc0bb93314a2e17d61a435e588 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_92dc6917331139980b86eeb68c507f1a = $(`<div id="html_92dc6917331139980b86eeb68c507f1a" style="width: 100.0%; height: 100.0%;">                 <b>Device ID:</b> JPM22108565<br>                 <b>Serial No:</b> JPM22108565<br>                 <b>Manufacturer:</b> LNT<br>                 <b>Org Name:</b> EPDCL<br>                 <b>Circle Name:</b> ELURU<br>                 <b>Division Name:</b> NIDADAVOLE<br>                 <b>Sub Division Name:</b> NIDADAVOLE<br>                 <b>Section Name:</b> MORTHA<br>                 <b>Feeder Name:</b> 11 KV Nagasamudram+24 Hrs<br>                 <b>Operator:</b> nan<br>                 <b>GFM Remarks:</b> nan<br>                 <b>Current Dept:</b> nan<br>                 <b>Consumer Name:</b> venkata rao<br>                 <b>Distance to current location:</b> 234 km<br>                 <a href='https://www.google.com/maps/dir/?api=1&destination=15.071473146375,77.522979900241&travelmode=driving&name=JPM22108565_avgkm_3.66' target='_blank'>Navigate to this point</a>                 </div>`)[0];
+                popup_5ea3a1bc0bb93314a2e17d61a435e588.setContent(html_92dc6917331139980b86eeb68c507f1a);
+            
+        
+
+        marker_e9e9e10a078c8c60b47a9209e797d305.bindPopup(popup_5ea3a1bc0bb93314a2e17d61a435e588)
+        ;
+
+        
+    
+    
+            marker_e9e9e10a078c8c60b47a9209e797d305.bindTooltip(
+                `<div>
+                     Device ID: JPM22108565
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1aa45cff4131cf9a277e64469210d017 = L.marker(
+                [15.076196185975, 77.514545693994],
+                {}
+            ).addTo(feature_group_6b714c7010a881b551b76ea52decb5e9);
+        
+    
+            var div_icon_f12f6124443524d0ed2e38f1bcd34b37 = L.divIcon({"className": "empty", "html": "\n                        \u003cdiv style=\"display: flex; flex-direction: column; align-items: center; text-align: center;\"\u003e\n                            \u003ci class=\"fa fa-map-marker\" style=\"font-size: 24px; color: #c5d83a;\"\u003e\u003c/i\u003e\u003cbr\u003e\n                            \u003cdiv style=\"font-size: 10px; color: #c5d83a; font-weight: bold;\"\u003e\n                                JPM22103650\u003cbr\u003e\n                                234 km\n                            \u003c/div\u003e\n                        \u003c/div\u003e\n                        ", "iconSize": [50, 50]});
+            marker_1aa45cff4131cf9a277e64469210d017.setIcon(div_icon_f12f6124443524d0ed2e38f1bcd34b37);
+        
+    
+        var popup_e752d861158bd8853c92e22ad4947133 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b1ae59718732e7799eec02eb86b716ee = $(`<div id="html_b1ae59718732e7799eec02eb86b716ee" style="width: 100.0%; height: 100.0%;">                 <b>Device ID:</b> JPM22103650<br>                 <b>Serial No:</b> JPM22103650<br>                 <b>Manufacturer:</b> LNT<br>                 <b>Org Name:</b> EPDCL<br>                 <b>Circle Name:</b> ELURU<br>                 <b>Division Name:</b> NIDADAVOLE<br>                 <b>Sub Division Name:</b> NIDADAVOLE<br>                 <b>Section Name:</b> MORTHA<br>                 <b>Feeder Name:</b> 11 KV Nagasamudram+24 Hrs<br>                 <b>Operator:</b> nan<br>                 <b>GFM Remarks:</b> nan<br>                 <b>Current Dept:</b> nan<br>                 <b>Consumer Name:</b> venkata rao<br>                 <b>Distance to current location:</b> 234 km<br>                 <a href='https://www.google.com/maps/dir/?api=1&destination=15.076196185975,77.514545693994&travelmode=driving&name=JPM22103650_avgkm_3.66' target='_blank'>Navigate to this point</a>                 </div>`)[0];
+                popup_e752d861158bd8853c92e22ad4947133.setContent(html_b1ae59718732e7799eec02eb86b716ee);
+            
+        
+
+        marker_1aa45cff4131cf9a277e64469210d017.bindPopup(popup_e752d861158bd8853c92e22ad4947133)
+        ;
+
+        
+    
+    
+            marker_1aa45cff4131cf9a277e64469210d017.bindTooltip(
+                `<div>
+                     Device ID: JPM22103650
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fcc6e97183ffe46e88d98cce6e214472 = L.marker(
+                [15.046622126129, 77.518017143011],
+                {}
+            ).addTo(feature_group_6b714c7010a881b551b76ea52decb5e9);
+        
+    
+            var div_icon_d01693ea8d14b81c440f2bf7b5f67fee = L.divIcon({"className": "empty", "html": "\n                        \u003cdiv style=\"display: flex; flex-direction: column; align-items: center; text-align: center;\"\u003e\n                            \u003ci class=\"fa fa-map-marker\" style=\"font-size: 24px; color: #c5d83a;\"\u003e\u003c/i\u003e\u003cbr\u003e\n                            \u003cdiv style=\"font-size: 10px; color: #c5d83a; font-weight: bold;\"\u003e\n                                JPM22103733\u003cbr\u003e\n                                231 km\n                            \u003c/div\u003e\n                        \u003c/div\u003e\n                        ", "iconSize": [50, 50]});
+            marker_fcc6e97183ffe46e88d98cce6e214472.setIcon(div_icon_d01693ea8d14b81c440f2bf7b5f67fee);
+        
+    
+        var popup_0401ab743cc48048b9ed00538cd3abb0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_42ec744a432bc4d467ce53d4f11d0093 = $(`<div id="html_42ec744a432bc4d467ce53d4f11d0093" style="width: 100.0%; height: 100.0%;">                 <b>Device ID:</b> JPM22103733<br>                 <b>Serial No:</b> JPM22103733<br>                 <b>Manufacturer:</b> LNT<br>                 <b>Org Name:</b> EPDCL<br>                 <b>Circle Name:</b> ELURU<br>                 <b>Division Name:</b> NIDADAVOLE<br>                 <b>Sub Division Name:</b> NIDADAVOLE<br>                 <b>Section Name:</b> MORTHA<br>                 <b>Feeder Name:</b> 11 KV Nagasamudram+24 Hrs<br>                 <b>Operator:</b> nan<br>                 <b>GFM Remarks:</b> nan<br>                 <b>Current Dept:</b> nan<br>                 <b>Consumer Name:</b> venkata rao<br>                 <b>Distance to current location:</b> 231 km<br>                 <a href='https://www.google.com/maps/dir/?api=1&destination=15.046622126129,77.518017143011&travelmode=driving&name=JPM22103733_avgkm_3.66' target='_blank'>Navigate to this point</a>                 </div>`)[0];
+                popup_0401ab743cc48048b9ed00538cd3abb0.setContent(html_42ec744a432bc4d467ce53d4f11d0093);
+            
+        
+
+        marker_fcc6e97183ffe46e88d98cce6e214472.bindPopup(popup_0401ab743cc48048b9ed00538cd3abb0)
+        ;
+
+        
+    
+    
+            marker_fcc6e97183ffe46e88d98cce6e214472.bindTooltip(
+                `<div>
+                     Device ID: JPM22103733
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_add3a794b73e37aa549ad9dcca14dcf2 = L.marker(
+                [15.055792058619, 77.509567514062],
+                {}
+            ).addTo(feature_group_6b714c7010a881b551b76ea52decb5e9);
+        
+    
+            var div_icon_598ffb40ae5a60e447426e9e52c33fe7 = L.divIcon({"className": "empty", "html": "\n                        \u003cdiv style=\"display: flex; flex-direction: column; align-items: center; text-align: center;\"\u003e\n                            \u003ci class=\"fa fa-map-marker\" style=\"font-size: 24px; color: #c5d83a;\"\u003e\u003c/i\u003e\u003cbr\u003e\n                            \u003cdiv style=\"font-size: 10px; color: #c5d83a; font-weight: bold;\"\u003e\n                                JPM22109498\u003cbr\u003e\n                                232 km\n                            \u003c/div\u003e\n                        \u003c/div\u003e\n                        ", "iconSize": [50, 50]});
+            marker_add3a794b73e37aa549ad9dcca14dcf2.setIcon(div_icon_598ffb40ae5a60e447426e9e52c33fe7);
+        
+    
+        var popup_654f9af32775240d1b33b2a5e99d2697 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1d6a1065a887de7934ca998f40624248 = $(`<div id="html_1d6a1065a887de7934ca998f40624248" style="width: 100.0%; height: 100.0%;">                 <b>Device ID:</b> JPM22109498<br>                 <b>Serial No:</b> JPM22109498<br>                 <b>Manufacturer:</b> LNT<br>                 <b>Org Name:</b> EPDCL<br>                 <b>Circle Name:</b> ELURU<br>                 <b>Division Name:</b> NIDADAVOLE<br>                 <b>Sub Division Name:</b> NIDADAVOLE<br>                 <b>Section Name:</b> MORTHA<br>                 <b>Feeder Name:</b> 11 KV Nagasamudram+24 Hrs<br>                 <b>Operator:</b> nan<br>                 <b>GFM Remarks:</b> nan<br>                 <b>Current Dept:</b> nan<br>                 <b>Consumer Name:</b> venkata rao<br>                 <b>Distance to current location:</b> 232 km<br>                 <a href='https://www.google.com/maps/dir/?api=1&destination=15.055792058619,77.509567514062&travelmode=driving&name=JPM22109498_avgkm_3.66' target='_blank'>Navigate to this point</a>                 </div>`)[0];
+                popup_654f9af32775240d1b33b2a5e99d2697.setContent(html_1d6a1065a887de7934ca998f40624248);
+            
+        
+
+        marker_add3a794b73e37aa549ad9dcca14dcf2.bindPopup(popup_654f9af32775240d1b33b2a5e99d2697)
+        ;
+
+        
+    
+    
+            marker_add3a794b73e37aa549ad9dcca14dcf2.bindTooltip(
+                `<div>
+                     Device ID: JPM22109498
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_19dbf6f3e9204e0d8a93cc065db8f501 = L.marker(
+                [15.0739235, 77.5128086],
+                {}
+            ).addTo(feature_group_6b714c7010a881b551b76ea52decb5e9);
+        
+    
+            var div_icon_128e6b6c8fc1a117e72adad9e1fca036 = L.divIcon({"className": "empty", "html": "\n                        \u003cdiv style=\"display: flex; flex-direction: column; align-items: center; text-align: center;\"\u003e\n                            \u003ci class=\"fa fa-map-marker\" style=\"font-size: 24px; color: #c5d83a;\"\u003e\u003c/i\u003e\u003cbr\u003e\n                            \u003cdiv style=\"font-size: 10px; color: #c5d83a; font-weight: bold;\"\u003e\n                                JPM22107379\u003cbr\u003e\n                                234 km\n                            \u003c/div\u003e\n                        \u003c/div\u003e\n                        ", "iconSize": [50, 50]});
+            marker_19dbf6f3e9204e0d8a93cc065db8f501.setIcon(div_icon_128e6b6c8fc1a117e72adad9e1fca036);
+        
+    
+        var popup_c0d0c49af503b1410d59599ecbfa2bc8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d8231e2bfe2cab94da2040a8d8221367 = $(`<div id="html_d8231e2bfe2cab94da2040a8d8221367" style="width: 100.0%; height: 100.0%;">                 <b>Device ID:</b> JPM22107379<br>                 <b>Serial No:</b> JPM22107379<br>                 <b>Manufacturer:</b> LNT<br>                 <b>Org Name:</b> EPDCL<br>                 <b>Circle Name:</b> ELURU<br>                 <b>Division Name:</b> NIDADAVOLE<br>                 <b>Sub Division Name:</b> NIDADAVOLE<br>                 <b>Section Name:</b> MORTHA<br>                 <b>Feeder Name:</b> 11 KV Nagasamudram+24 Hrs<br>                 <b>Operator:</b> nan<br>                 <b>GFM Remarks:</b> nan<br>                 <b>Current Dept:</b> nan<br>                 <b>Consumer Name:</b> venkata rao<br>                 <b>Distance to current location:</b> 234 km<br>                 <a href='https://www.google.com/maps/dir/?api=1&destination=15.0739235,77.5128086&travelmode=driving&name=JPM22107379_avgkm_3.66' target='_blank'>Navigate to this point</a>                 </div>`)[0];
+                popup_c0d0c49af503b1410d59599ecbfa2bc8.setContent(html_d8231e2bfe2cab94da2040a8d8221367);
+            
+        
+
+        marker_19dbf6f3e9204e0d8a93cc065db8f501.bindPopup(popup_c0d0c49af503b1410d59599ecbfa2bc8)
+        ;
+
+        
+    
+    
+            marker_19dbf6f3e9204e0d8a93cc065db8f501.bindTooltip(
+                `<div>
+                     Device ID: JPM22107379
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ac2484f205bb82bdda8d176c27696d8c = L.marker(
+                [15.076026548147, 77.51366391778],
+                {}
+            ).addTo(feature_group_6b714c7010a881b551b76ea52decb5e9);
+        
+    
+            var div_icon_2a1ac01d860fe62fffc53b525072f52d = L.divIcon({"className": "empty", "html": "\n                        \u003cdiv style=\"display: flex; flex-direction: column; align-items: center; text-align: center;\"\u003e\n                            \u003ci class=\"fa fa-map-marker\" style=\"font-size: 24px; color: #c5d83a;\"\u003e\u003c/i\u003e\u003cbr\u003e\n                            \u003cdiv style=\"font-size: 10px; color: #c5d83a; font-weight: bold;\"\u003e\n                                JPM22106575\u003cbr\u003e\n                                234 km\n                            \u003c/div\u003e\n                        \u003c/div\u003e\n                        ", "iconSize": [50, 50]});
+            marker_ac2484f205bb82bdda8d176c27696d8c.setIcon(div_icon_2a1ac01d860fe62fffc53b525072f52d);
+        
+    
+        var popup_b0593a21282a4c7bfdad4d90fa8ee06e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4f72f7bd2520112f77ccb1342853f363 = $(`<div id="html_4f72f7bd2520112f77ccb1342853f363" style="width: 100.0%; height: 100.0%;">                 <b>Device ID:</b> JPM22106575<br>                 <b>Serial No:</b> JPM22106575<br>                 <b>Manufacturer:</b> LNT<br>                 <b>Org Name:</b> EPDCL<br>                 <b>Circle Name:</b> ELURU<br>                 <b>Division Name:</b> NIDADAVOLE<br>                 <b>Sub Division Name:</b> NIDADAVOLE<br>                 <b>Section Name:</b> MORTHA<br>                 <b>Feeder Name:</b> 11 KV Nagasamudram+24 Hrs<br>                 <b>Operator:</b> nan<br>                 <b>GFM Remarks:</b> nan<br>                 <b>Current Dept:</b> nan<br>                 <b>Consumer Name:</b> venkata rao<br>                 <b>Distance to current location:</b> 234 km<br>                 <a href='https://www.google.com/maps/dir/?api=1&destination=15.076026548147,77.51366391778&travelmode=driving&name=JPM22106575_avgkm_3.66' target='_blank'>Navigate to this point</a>                 </div>`)[0];
+                popup_b0593a21282a4c7bfdad4d90fa8ee06e.setContent(html_4f72f7bd2520112f77ccb1342853f363);
+            
+        
+
+        marker_ac2484f205bb82bdda8d176c27696d8c.bindPopup(popup_b0593a21282a4c7bfdad4d90fa8ee06e)
+        ;
+
+        
+    
+    
+            marker_ac2484f205bb82bdda8d176c27696d8c.bindTooltip(
+                `<div>
+                     Device ID: JPM22106575
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8343caaea1a46edc26524c1fa1928c68 = L.marker(
+                [15.044181773614, 77.520523667335],
+                {}
+            ).addTo(feature_group_6b714c7010a881b551b76ea52decb5e9);
+        
+    
+            var div_icon_18ac359c3b545dec50b8e626268f3792 = L.divIcon({"className": "empty", "html": "\n                        \u003cdiv style=\"display: flex; flex-direction: column; align-items: center; text-align: center;\"\u003e\n                            \u003ci class=\"fa fa-map-marker\" style=\"font-size: 24px; color: #c5d83a;\"\u003e\u003c/i\u003e\u003cbr\u003e\n                            \u003cdiv style=\"font-size: 10px; color: #c5d83a; font-weight: bold;\"\u003e\n                                JPM22104425\u003cbr\u003e\n                                231 km\n                            \u003c/div\u003e\n                        \u003c/div\u003e\n                        ", "iconSize": [50, 50]});
+            marker_8343caaea1a46edc26524c1fa1928c68.setIcon(div_icon_18ac359c3b545dec50b8e626268f3792);
+        
+    
+        var popup_75b8dcdfe6299531ff90818c296c9429 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ba4e198fdbf15564ee9ce5f6402a39cb = $(`<div id="html_ba4e198fdbf15564ee9ce5f6402a39cb" style="width: 100.0%; height: 100.0%;">                 <b>Device ID:</b> JPM22104425<br>                 <b>Serial No:</b> JPM22104425<br>                 <b>Manufacturer:</b> LNT<br>                 <b>Org Name:</b> EPDCL<br>                 <b>Circle Name:</b> ELURU<br>                 <b>Division Name:</b> NIDADAVOLE<br>                 <b>Sub Division Name:</b> NIDADAVOLE<br>                 <b>Section Name:</b> MORTHA<br>                 <b>Feeder Name:</b> 11 KV Nagasamudram+24 Hrs<br>                 <b>Operator:</b> nan<br>                 <b>GFM Remarks:</b> nan<br>                 <b>Current Dept:</b> nan<br>                 <b>Consumer Name:</b> venkata rao<br>                 <b>Distance to current location:</b> 231 km<br>                 <a href='https://www.google.com/maps/dir/?api=1&destination=15.044181773614,77.520523667335&travelmode=driving&name=JPM22104425_avgkm_3.66' target='_blank'>Navigate to this point</a>                 </div>`)[0];
+                popup_75b8dcdfe6299531ff90818c296c9429.setContent(html_ba4e198fdbf15564ee9ce5f6402a39cb);
+            
+        
+
+        marker_8343caaea1a46edc26524c1fa1928c68.bindPopup(popup_75b8dcdfe6299531ff90818c296c9429)
+        ;
+
+        
+    
+    
+            marker_8343caaea1a46edc26524c1fa1928c68.bindTooltip(
+                `<div>
+                     Device ID: JPM22104425
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f46ff51dc9c9924f51b459ce6eb4f48a = L.marker(
+                [15.04851, 77.5021752],
+                {}
+            ).addTo(feature_group_6b714c7010a881b551b76ea52decb5e9);
+        
+    
+            var div_icon_8377adac7ed81d0cadd77c7c1523b4e4 = L.divIcon({"className": "empty", "html": "\n                        \u003cdiv style=\"display: flex; flex-direction: column; align-items: center; text-align: center;\"\u003e\n                            \u003ci class=\"fa fa-map-marker\" style=\"font-size: 24px; color: #c5d83a;\"\u003e\u003c/i\u003e\u003cbr\u003e\n                            \u003cdiv style=\"font-size: 10px; color: #c5d83a; font-weight: bold;\"\u003e\n                                JPM22101563\u003cbr\u003e\n                                231 km\n                            \u003c/div\u003e\n                        \u003c/div\u003e\n                        ", "iconSize": [50, 50]});
+            marker_f46ff51dc9c9924f51b459ce6eb4f48a.setIcon(div_icon_8377adac7ed81d0cadd77c7c1523b4e4);
+        
+    
+        var popup_6800b177baf258e0aee62b9598c55070 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_afcd740e485abd9703b899837449ec64 = $(`<div id="html_afcd740e485abd9703b899837449ec64" style="width: 100.0%; height: 100.0%;">                 <b>Device ID:</b> JPM22101563<br>                 <b>Serial No:</b> JPM22101563<br>                 <b>Manufacturer:</b> LNT<br>                 <b>Org Name:</b> EPDCL<br>                 <b>Circle Name:</b> ELURU<br>                 <b>Division Name:</b> NIDADAVOLE<br>                 <b>Sub Division Name:</b> NIDADAVOLE<br>                 <b>Section Name:</b> MORTHA<br>                 <b>Feeder Name:</b> 11 KV Nagasamudram+24 Hrs<br>                 <b>Operator:</b> nan<br>                 <b>GFM Remarks:</b> nan<br>                 <b>Current Dept:</b> nan<br>                 <b>Consumer Name:</b> venkata rao<br>                 <b>Distance to current location:</b> 231 km<br>                 <a href='https://www.google.com/maps/dir/?api=1&destination=15.04851,77.5021752&travelmode=driving&name=JPM22101563_avgkm_3.66' target='_blank'>Navigate to this point</a>                 </div>`)[0];
+                popup_6800b177baf258e0aee62b9598c55070.setContent(html_afcd740e485abd9703b899837449ec64);
+            
+        
+
+        marker_f46ff51dc9c9924f51b459ce6eb4f48a.bindPopup(popup_6800b177baf258e0aee62b9598c55070)
+        ;
+
+        
+    
+    
+            marker_f46ff51dc9c9924f51b459ce6eb4f48a.bindTooltip(
+                `<div>
+                     Device ID: JPM22101563
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d111b29284e658f2efa37cc1f27e496a = L.marker(
+                [15.045505078227, 77.506035044789],
+                {}
+            ).addTo(feature_group_6b714c7010a881b551b76ea52decb5e9);
+        
+    
+            var div_icon_90420c4bbf64158a2342534d07175714 = L.divIcon({"className": "empty", "html": "\n                        \u003cdiv style=\"display: flex; flex-direction: column; align-items: center; text-align: center;\"\u003e\n                            \u003ci class=\"fa fa-map-marker\" style=\"font-size: 24px; color: #c5d83a;\"\u003e\u003c/i\u003e\u003cbr\u003e\n                            \u003cdiv style=\"font-size: 10px; color: #c5d83a; font-weight: bold;\"\u003e\n                                JPM22101858\u003cbr\u003e\n                                231 km\n                            \u003c/div\u003e\n                        \u003c/div\u003e\n                        ", "iconSize": [50, 50]});
+            marker_d111b29284e658f2efa37cc1f27e496a.setIcon(div_icon_90420c4bbf64158a2342534d07175714);
+        
+    
+        var popup_27eaa0a4a46b6b38622f074fac43bd03 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8296689b4c0d80abf19da435cd208426 = $(`<div id="html_8296689b4c0d80abf19da435cd208426" style="width: 100.0%; height: 100.0%;">                 <b>Device ID:</b> JPM22101858<br>                 <b>Serial No:</b> JPM22101858<br>                 <b>Manufacturer:</b> LNT<br>                 <b>Org Name:</b> EPDCL<br>                 <b>Circle Name:</b> ELURU<br>                 <b>Division Name:</b> NIDADAVOLE<br>                 <b>Sub Division Name:</b> NIDADAVOLE<br>                 <b>Section Name:</b> MORTHA<br>                 <b>Feeder Name:</b> 11 KV Nagasamudram+24 Hrs<br>                 <b>Operator:</b> nan<br>                 <b>GFM Remarks:</b> nan<br>                 <b>Current Dept:</b> nan<br>                 <b>Consumer Name:</b> venkata rao<br>                 <b>Distance to current location:</b> 231 km<br>                 <a href='https://www.google.com/maps/dir/?api=1&destination=15.045505078227,77.506035044789&travelmode=driving&name=JPM22101858_avgkm_3.66' target='_blank'>Navigate to this point</a>                 </div>`)[0];
+                popup_27eaa0a4a46b6b38622f074fac43bd03.setContent(html_8296689b4c0d80abf19da435cd208426);
+            
+        
+
+        marker_d111b29284e658f2efa37cc1f27e496a.bindPopup(popup_27eaa0a4a46b6b38622f074fac43bd03)
+        ;
+
+        
+    
+    
+            marker_d111b29284e658f2efa37cc1f27e496a.bindTooltip(
+                `<div>
+                     Device ID: JPM22101858
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            feature_group_6b714c7010a881b551b76ea52decb5e9.addTo(map_9f52ce16d4975f4a4052ac007c42f00f);
+        
+</script>
+</html>
